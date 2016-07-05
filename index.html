@@ -7,18 +7,20 @@
 </head>
 <body>
   <div class="achievements">
-    <div class="achieve">
+    <div class="achieve -blue">
       <img src="i/owl.png" alt="">
     </div>
-    <div class="achieve">
-      <img src="i/owl.png" alt="">
+    <div class="achieve -purple">
+      <img src="i/owl-purple.png" alt="">
     </div>
-    <div class="achieve"></div>
-    <div class="achieve"></div>
-    <div class="achieve"></div>
-    <div class="achieve"></div>
-    <div class="achieve"></div>
-    <div class="achieve"></div>
   </div>
+  <script>
+    var qs = document.querySelector('.achievements');
+    for(var i = 2 ; i < 100 ; i++ ){
+      var el = document.createElement('div');
+      el.className = 'achieve';
+      qs.appendChild(el);
+    }
+  </script>
 </body>
 </html>
