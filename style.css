@@ -1,5 +1,5 @@
 .achievements {
-  counter-reset: list;
+  counter-reset: list 1;
 }
 
 .achievements:after {
@@ -13,6 +13,7 @@
   width: 100px;
   height: 100px;
   border-radius: 100px;
+  background-color: #f6f6f6;
   border: 5px solid #ccc;
   position: relative;
   float: left;
@@ -21,6 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ccc;
 }
 
 .achievements .achieve img {
@@ -55,7 +57,7 @@
   z-index: 20;
   counter-increment: list 1;
   content: counter(list);
-  background-color: #fff;
+  background-color: inherit;
   position: absolute;
   width: 35px;
   height: 35px;
@@ -68,13 +70,27 @@
   font-family: sans-serif;
   font-size: 19px;
   font-weight: bold;
-  color: #ccc;
+  color: inherit;
   border-top-color: transparent;
   border-left-color: transparent;
   background-clip: padding-box;
+  border-right-color: inherit;
+  border-bottom-color: inherit;
 }
-
 
 .achievements .achieve:first-of-type:after{
   display: none;
+}
+
+/* color themes */
+
+.achievements .achieve.-blue{
+  background-color: #f3f8fa;
+  border-color: #89b8cf;
+  color: #89b8cf;
+}
+.achievements .achieve.-purple{
+  background-color: #f7f5f8;
+  border-color: #b09eb7;
+  color: #b09eb7;
 }
